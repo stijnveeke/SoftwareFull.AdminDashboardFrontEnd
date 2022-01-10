@@ -1,0 +1,31 @@
+<div class="row">
+  <h3 class="mt-3 mb-2 col-7" style="flex; justify-content: flex-start;">Product list.</h3>
+  <div class="mt-3 mb-2 col-5" style="display: flex; justify-content: flex-end;">
+    <a class="btn btn-info" routerLink="/products/create">Create</a>
+  </div>
+</div>
+<table class="table table-striped">
+    <thead>
+        <th>Id</th>
+        <th>Productname</th>
+        <th>Productslug</th>
+        <th>Price</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr *ngIf="(products | async)?.length==0">
+            <td colspan="4" class="alert alert-warning">No products exist yet! <a routerLink="/products/create">Create</a></td>
+        </tr>
+        <tr *ngFor="let product of products | async">
+            <td>{{product.id}}</td>
+            <td>{{product.productName}}</td>
+            <td>{{product.productSlug}}</td>
+            <td>{{product.price}}</td>
+            <td class="btn-group">
+                <a routerLink="/products/{{product.productSlug}}" class="btn btn-info">Show</a>
+                <a routerLink="/products/edit/{{product.productSlug}}" class="btn btn-warning">Edit</a>
+                <a href="#" (click)="deleteProduct($event, product.id)" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

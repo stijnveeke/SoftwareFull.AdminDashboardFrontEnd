@@ -1,0 +1,17 @@
+<form [formGroup]="productCreateForm"  (ngSubmit)="onSubmit()">
+
+    <label class="col-12 m-0 mt-2 p-1" for="productname">Productname: </label>
+    <input (keyup)="onTitleChange($event)" class="form-control" id="productname" type="text" formControlName="productName">
+    
+    <label class="col-12 m-0 mt-2 p-1" for="productslug">Productslug: </label>
+    <input class="form-control" id="productslug" type="text" formControlName="productSlug" disabled value="{{productSlug}}">
+  
+    <label class="col-12 m-0 mt-2 p-1" for="description">Description: </label>
+    <textarea class="form-control" id="description" formControlName="description"></textarea>
+  
+    <label class="col-12 m-0 mt-2 p-1" for="price">Price: </label>
+    <input class="form-control" placeholder="0.00" min="0" step="5" id="price" type="number" formControlName="price">
+
+    <p>Complete the form to enable button.</p>
+    <button type="submit" class="btn btn-success" [disabled]="!productCreateForm.valid">Submit</button>
+</form>

@@ -3,7 +3,6 @@ import { AbstractControl, FormBuilder, FormControl, FormGroup, NgForm, Validator
 import { ProductOutput } from 'src/app/dto/productOutput';
 import ShoppingcartService from '../../services/shoppingcart.service';
 import {ProductLine} from '../../dto/product-line';
-import {AuthService} from "@auth0/auth0-angular";
 
 @Component({
   selector: 'app-add-product-form',

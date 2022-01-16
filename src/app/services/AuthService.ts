@@ -85,7 +85,7 @@ export class AuthService {
   }
 
   public logout(): void {
-    
+
     // Remove tokens and expiry time from localStorage
     localStorage.removeItem('access_token');
     localStorage.removeItem('id_token');
@@ -94,7 +94,7 @@ export class AuthService {
 
     this.auth0.logout();
     console.log("logged out!");
-    window.location.href = "http://localhost:4200/logout";
+    window.location.href = "https://localhost:4200/logout";
   }
 
   public isAuthenticated(): boolean {

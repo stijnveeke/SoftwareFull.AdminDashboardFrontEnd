@@ -2,6 +2,7 @@
   "name": "login-demo",
   "version": "0.0.0",
   "scripts": {
+    "docker-start": "docker build -t admindashboard . && docker run -p 4205:443 --name AdminDashboard  admindashboard",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",

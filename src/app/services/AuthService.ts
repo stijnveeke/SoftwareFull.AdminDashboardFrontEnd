@@ -94,7 +94,7 @@ export class AuthService {
 
     this.auth0.logout();
     console.log("logged out!");
-    window.location.href = "https://localhost:4200/logout";
+    window.location.href = 'https://softwarefullwebshop.azurewebsites.net/logout';
   }
 
   public isAuthenticated(): boolean {

@@ -1,9 +1,16 @@
 <div class="d-flex flex-column h-100">
-  <app-nav-bar></app-nav-bar>
 
-  <div class="container flex-grow-1 flex-shrink-1">
-    <router-outlet></router-outlet>
+
+  <div class="row m-0 p-0">
+    <div class="col-2 m-0 p-0">
+      <app-nav-bar></app-nav-bar>
+    </div>
+
+    <div class="col-10 m-0 p-2" style="max-height: 100vh; overflow-y: scroll">
+      <router-outlet></router-outlet>
+    </div>
+
   </div>
 
-  <app-footer></app-footer>
+
 </div>

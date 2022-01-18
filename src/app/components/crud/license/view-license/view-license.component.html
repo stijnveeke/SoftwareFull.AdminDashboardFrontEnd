@@ -1,0 +1,18 @@
+<div *ngIf="(license | async) as license">
+  <div class="row  m-0 p-0">
+    <h3 class="mt-3 mb-2 col-7" style="justify-content: flex-start;">License: {{license.licenseKey}}</h3>
+    <div class="mt-3 mb-2 col-5" style="display: flex; justify-content: flex-end;">
+      <a class="btn btn-info" routerLink="/licenses">List</a>
+    </div>
+  </div>
+
+  <label class="col-12 m-0 mt-2 p-0">LicenseKey:</label>
+  <input class="form-control" type="text" disabled value="{{license.licenseKey}}" />
+
+  <label class="col-12 m-0 mt-2 p-0">Activateable Amount:</label>
+  <input class="form-control" type="text" disabled value="{{license.activateableAmount}}" />
+
+  <label class="col-12 m-0 mt-2 p-0">Times Activated:</label>
+  <input class="form-control" type="text" disabled value="{{license.timesActivated}}" />
+</div>
+

@@ -11,6 +11,9 @@ import { CreateProductComponent } from './components/crud/product/create-product
 import { ListProductComponent } from './components/crud/product/list-product/list-product.component';
 import { ViewProductComponent } from './components/crud/product/view-product/view-product.component';
 import {EditProductComponent} from './components/crud/product/edit-product/edit-product.component';
+import {ListLicenseComponent} from "./components/crud/license/list-license/list-license.component";
+import {ViewUserComponent} from "./components/crud/user/view-user/view-user.component";
+import {ListUserComponent} from "./components/crud/user/list-user/list-user.component";
 
 const routes: Routes = [
   {
@@ -25,6 +28,26 @@ const routes: Routes = [
   {
     path: 'products',
     component: ListProductComponent,
+    canActivate: [AuthGuardService, ScopeGuardService]
+  },
+  {
+    path: 'licenses',
+    component: ListLicenseComponent,
+    canActivate: [AuthGuardService, ScopeGuardService]
+  },
+  {
+    path: 'licenses/:licenseId',
+    component: ListLicenseComponent,
+    canActivate: [AuthGuardService, ScopeGuardService]
+  },
+  {
+    path: 'users',
+    component: ListUserComponent,
+    canActivate: [AuthGuardService, ScopeGuardService]
+  },
+  {
+    path: 'users/:userId',
+    component: ViewUserComponent,
     canActivate: [AuthGuardService, ScopeGuardService]
   },
   {

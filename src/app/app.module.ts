@@ -32,7 +32,10 @@ import { CreateProductComponent } from './components/crud/product/create-product
 import { ListProductComponent } from './components/crud/product/list-product/list-product.component';
 import { ViewProductComponent } from './components/crud/product/view-product/view-product.component';
 import { EditProductComponent } from './components/crud/product/edit-product/edit-product.component';
-
+import {ViewLicenseComponent} from './components/crud/license/view-license/view-license.component';
+import {ListLicenseComponent} from './components/crud/license/list-license/list-license.component';
+import {ViewUserComponent} from './components/crud/user/view-user/view-user.component';
+import {ListUserComponent} from './components/crud/user/list-user/list-user.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,7 +56,11 @@ import { EditProductComponent } from './components/crud/product/edit-product/edi
     CreateProductComponent,
     ListProductComponent,
     ViewProductComponent,
-    EditProductComponent
+    EditProductComponent,
+    ViewLicenseComponent,
+    ListLicenseComponent,
+    ViewUserComponent,
+    ListUserComponent,
   ],
   imports: [
     BrowserModule,
